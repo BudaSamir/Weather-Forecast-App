@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:weather_forecast_app/core/constants/app_colors.dart';
 import 'package:weather_forecast_app/domain/models/city.dart';
 
+import 'home_screen.dart';
+
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
 
@@ -78,7 +80,8 @@ class _WelcomeState extends State<Welcome> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.secondaryColor,
         onPressed: () {
-          // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const HomeScreen()));
         },
         child: Icon(Icons.pin_drop),
       ),
